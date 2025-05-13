@@ -1,1 +1,8 @@
-<p>favoris works!</p>
+<div class="container mt-5">
+  <h2>Mes favoris</h2>
+  <ul class="list-group">
+    <li *ngFor="let favori of favoris" class="list-group-item">
+      Formation ID : {{ favori.formationId }}
+    </li>
+  </ul>
+</div>

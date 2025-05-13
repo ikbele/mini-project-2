@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { EtudiantsComponent } from './pages/etudiants/etudiants.component';
 import { ApiService } from './services/api.service';
 import { FavorisComponent } from './pages/favoris/favoris.component';
+import { FormationCardComponent } from './components/formation-card/formation-card.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FavorisComponent } from './pages/favoris/favoris.component';
     FormationsComponent,
     DepartementsComponent,
     EtudiantsComponent,
-    FavorisComponent
+    FavorisComponent,
+    FormationCardComponent
   ],
   imports: [
     BrowserModule,

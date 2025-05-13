@@ -1,0 +1,8 @@
+<div class="card mb-3 p-3 border">
+  <h5>{{ formation.nom }}</h5>
+  <p>{{ formation.description }}</p>
+  <button class="btn btn-outline-danger" (click)="toggleFavori()">
+    <span *ngIf="estFavori">❤️ Retirer des favoris</span>
+    <span *ngIf="!estFavori">🤍 Ajouter aux favoris</span>
+  </button>
+</div>

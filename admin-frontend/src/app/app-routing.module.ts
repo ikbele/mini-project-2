@@ -4,13 +4,14 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { EtudiantsComponent } from './pages/etudiants/etudiants.component';
 import { FormationsComponent } from './pages/formations/formations.component';
 import { DepartementsComponent } from './pages/departements/departements.component';
-
+import { FavorisComponent } from './pages/favoris/favoris.component';
 const routes: Routes = [ 
   
   { path: 'dashboard', component: DashboardComponent },
   { path: 'etudiants', component: EtudiantsComponent },
   { path: 'formations', component: FormationsComponent },
   { path: 'departements', component: DepartementsComponent },
+   { path: 'favoris', component: FavorisComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 ];
 
