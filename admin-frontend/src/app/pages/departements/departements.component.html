@@ -1,0 +1,14 @@
+<h2>Départements</h2>
+
+<form (submit)="ajouterDepartement(); $event.preventDefault()">
+  <input [(ngModel)]="nouveauDepartement.nom" name="nom" placeholder="Nom" />
+  <input [(ngModel)]="nouveauDepartement.description" name="description" placeholder="Description" />
+  <button type="submit">Ajouter</button>
+</form>
+
+<ul>
+  <li *ngFor="let d of departements">
+    {{ d.nom }} - {{ d.description }}
+    <button (click)="supprimerDepartement(d.id)">Supprimer</button>
+  </li>
+</ul>

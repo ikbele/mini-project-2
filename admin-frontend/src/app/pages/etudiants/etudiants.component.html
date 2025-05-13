@@ -1,0 +1,28 @@
+<h2>Étudiants</h2>
+
+<form (submit)="ajouterEtudiant(); $event.preventDefault()">
+  <input [(ngModel)]="nouvelEtudiant.nom" name="nom" placeholder="Nom" required />
+  <input [(ngModel)]="nouvelEtudiant.email" name="email" placeholder="Email" required />
+  <input [(ngModel)]="nouvelEtudiant.age" name="age" type="number" placeholder="Âge" required />
+  <button type="submit">Ajouter</button>
+</form>
+
+<hr />
+
+<ul>
+  <li *ngFor="let e of etudiants">
+    <ng-container *ngIf="!isEdit || e.id !== etudiantEnEdition?.id; else edition">
+      {{ e.nom }} - {{ e.email }} - {{ e.age }} ans
+      <button (click)="modifierEtudiant(e)">Modifier</button>
+      <button (click)="supprimerEtudiant(e.id)">Supprimer</button>
+    </ng-container>
+
+    <ng-template #edition>
+      <input [(ngModel)]="etudiantEnEdition.nom" />
+      <input [(ngModel)]="etudiantEnEdition.email" />
+      <input [(ngModel)]="etudiantEnEdition.age" type="number" />
+      <button (click)="validerModification()">Valider</button>
+      <button (click)="annulerEdition()">Annuler</button>
+    </ng-template>
+  </li>
+</ul>

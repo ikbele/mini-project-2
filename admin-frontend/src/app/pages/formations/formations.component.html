@@ -1,0 +1,14 @@
+<h2>Formations</h2>
+
+<form (submit)="ajouterFormation(); $event.preventDefault()">
+  <input [(ngModel)]="nouvelleFormation.titre" name="titre" placeholder="Titre" />
+  <input [(ngModel)]="nouvelleFormation.niveau" name="niveau" placeholder="Niveau" />
+  <button type="submit">Ajouter</button>
+</form>
+
+<ul>
+  <li *ngFor="let f of formations">
+    {{ f.titre }} - {{ f.niveau }}
+    <button (click)="supprimerFormation(f.id)">Supprimer</button>
+  </li>
+</ul>
